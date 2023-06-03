@@ -1,5 +1,4 @@
 <?php
-    require "../../dao/pdo.php";
 
 
     // thêm danh muc
@@ -38,10 +37,14 @@
         }
     }
 
-    // select toàn bộ danh mục
-    function danhMuc_selectAll(){
-        $sql = "SELECT * FROM `loai`";
-        return pdo_query($sql);
+
+    function hang_hoa_select_loai($ma_loai){
+        $sql="SELECT * FROM hang_hoa WHERE ma_loai = ?";
+        return pdo_query($sql, $ma_loai);
     }
 
+    function hang_hoa_select_keyword($keyword){
+        $sql="SELECT * FROM hang_hoa JOIN loai on loai.ma_loai=hang_hoa.ma_loai WHERE ten_hh LIKE ? OR ten_loai LIKE ?";
+        return pdo_query($sql, '%'.$keyword.'%', '%'.$keyword.'%');
+    }
 ?>

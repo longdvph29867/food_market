@@ -6,6 +6,7 @@
         <th></th>
         <th>Mã Hàng Hoá</th>
         <th>Tên Hàng Hoá</th>
+        <th>Hình ảnh</th>
         <th>Đơn giá</th>
         <th>Giảm giá</th>
         <th>Lượt xem</th>
@@ -20,6 +21,7 @@
           <td><input type="checkbox"></td>
           <td><?php echo $item['ma_hh'] ?></td>
           <td><?php echo $item['ten_hh'] ?></td>
+          <td><img style="width: 100px;" src="<?php echo "$url_content/images/image_products/".$item['hinh'] ?>" alt=""></td>
           <td><?php echo $item['don_gia'] ?></td>
           <td><?php echo $item['giam_gia'] ?></td>
           <td><?php echo $item['so_luot_xem'] ?></td>

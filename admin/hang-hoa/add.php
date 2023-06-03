@@ -1,11 +1,8 @@
 
 <div class="container">
     <h3>Thêm sản phẩm</h3>
-    <?php if (isset($noti)) {
-        echo $noti;
-    } ?>
     <div>
-        <form action="index.php" method="post">
+        <form action="index.php" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="form-group col-6">
                     <label for="">Mã hàng hoá</label>
@@ -32,7 +29,7 @@
 
                 <div class="form-group col-6">
                     <label for="">Hình ảnh</label>
-                    <input type="file" class="form-control-file" name="hinh">
+                    <input type="file" class="form-control-file" name="file">
                     <small id="fileHelpId" class="form-text text-danger">Help text</small>
                 </div>
 

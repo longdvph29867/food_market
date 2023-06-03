@@ -9,9 +9,9 @@
     <li class="nav-item"><a class="nav-link text-white" href="../trang-chinh/">Trang chủ</a></li>
     <li class="nav-item"><a class="nav-link text-white" href="../danh-muc/">Danh mục</a></li>
     <li class="nav-item"><a class="nav-link text-white" href="../hang-hoa/">Hàng hoá</a></li>
-    <li class="nav-item"><a class="nav-link text-white" href="">Khách hàng</a></li>
-    <li class="nav-item"><a class="nav-link text-white" href="">Bình luận</a></li>
-    <li class="nav-item"><a class="nav-link text-white" href="">Thống kê</a></li>
+    <li class="nav-item"><a class="nav-link text-white" href="../khach-hang">Khách hàng</a></li>
+    <li class="nav-item"><a class="nav-link text-white" href="../binh-luan">Bình luận</a></li>
+    <li class="nav-item"><a class="nav-link text-white" href="../thong-ke">Thống kê</a></li>
   </ul>
 </div>
 </div>

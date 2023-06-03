@@ -1,5 +1,5 @@
 <?php
-    require "../../dao/pdo.php";
+
 
     // thêm danh muc
     function danhMuc_add($ten_loai){

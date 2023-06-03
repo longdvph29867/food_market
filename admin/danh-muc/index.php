@@ -1,5 +1,6 @@
 <?php
     require "../../global.php";
+    require "../../dao/pdo.php";
     require "../../dao/danhmuc.php";
 
     extract($_REQUEST);
@@ -29,7 +30,6 @@
         $view_name="list.php";
     }
     else if(exsist_param("btn-delete")){
-
         $id_loai=$_GET['maloai'];
         danhMuc_delete($id_loai);
 

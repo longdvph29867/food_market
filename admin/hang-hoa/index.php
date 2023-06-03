@@ -1,5 +1,7 @@
 <?php
     require "../../global.php";
+    require "../../dao/pdo.php";
+    require "../../dao/danhmuc.php";
     require "../../dao/hanghoa.php";
 
     extract($_REQUEST);
@@ -8,11 +10,12 @@
         $view_name="add.php";
     }
     else if(exsist_param("btn-insert")){
+        $up_hinh = save_file('file', "$image_dir/image_products/");
+        $hinh =  $up_hinh;
+        
         $ten_hh = $_POST['ten_hh'];
         $don_gia =  $_POST['don_gia'];
         $giam_gia =  $_POST['giam_gia'];
-        // $hinh =  $_POST['hinh'];
-        $hinh = "img";
         $ngay_nhap =  $_POST['ngay_nhap'];
         $mo_ta =  $_POST['mo_ta'];
         $dac_biet =  $_POST['dac_biet'];
@@ -30,12 +33,13 @@
         $view_name="edit.php";
     }
     else if(exsist_param("btn-update")){
+        $up_hinh = save_file('file', "$image_dir/image_products/");
+        $hinh =  strlen($up_hinh) > 0 ? $up_hinh : $_POST['old_hinh'];
+
         $ma_hh = $_POST['ma_hh'];
         $ten_hh = $_POST['ten_hh'];
         $don_gia =  $_POST['don_gia'];
         $giam_gia =  $_POST['giam_gia'];
-        // $hinh =  $_POST['hinh'];
-        $hinh = "img";
         $ngay_nhap =  $_POST['ngay_nhap'];
         $mo_ta =  $_POST['mo_ta'];
         $dac_biet =  $_POST['dac_biet'];
