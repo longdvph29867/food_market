@@ -55,7 +55,7 @@
             </div>
         </div>
         <!--  -->
-        <div class="header_bottom relative z-50">
+        <div class="header_bottom z-50 lg:z-0 ">
             <div class="
             container 
             mx-auto 
