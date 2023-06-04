@@ -47,4 +47,5 @@
         $sql="SELECT * FROM hang_hoa JOIN loai on loai.ma_loai=hang_hoa.ma_loai WHERE ten_hh LIKE ? OR ten_loai LIKE ?";
         return pdo_query($sql, '%'.$keyword.'%', '%'.$keyword.'%');
     }
+
 ?>

@@ -258,6 +258,9 @@ header .header_bottom .logo_scroll {
     opacity: 0;
     transition: all .2s;
 }
+header.scrollHeader .header_bottom {
+    position: relative;
+}
 header.scrollHeader .header_bottom .logo_scroll {
     max-height: 100px;
     opacity: 1;

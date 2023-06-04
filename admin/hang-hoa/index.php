@@ -10,20 +10,22 @@
         $view_name="add.php";
     }
     else if(exsist_param("btn-insert")){
-        $up_hinh = save_file('file', "$image_dir/image_products/");
-        $hinh =  $up_hinh;
-        
-        $ten_hh = $_POST['ten_hh'];
-        $don_gia =  $_POST['don_gia'];
-        $giam_gia =  $_POST['giam_gia'];
-        $ngay_nhap = $TODAY;
-        $mo_ta =  $_POST['mo_ta'];
-        $dac_biet =  $_POST['dac_biet'];
-        $ma_loai =  $_POST['ma_loai'];
-        hanghoa_add($ten_hh, $don_gia, $giam_gia, $hinh, $ngay_nhap, $mo_ta, $dac_biet, $ma_loai);
 
-        $items = hanghoa_selectAll();
-        $view_name="list.php";
+        
+        require './validate_hang_hoa.php';
+        
+        if(empty($errors)) {
+            $hinh = save_file('file', "$image_dir/image_products/");
+            $ngay_nhap = $TODAY;
+            hanghoa_add($ten_hh, $don_gia, $giam_gia, $hinh, $ngay_nhap, $mo_ta, $dac_biet, $ma_loai);
+            $items = hanghoa_selectAll();
+            $view_name="list.php";
+        }
+        else {
+            $lisDanhMuc = danhMuc_selectAll();
+            $view_name="add.php";
+        }
+
     }
     else if(exsist_param("btn_edit")){
         $lisDanhMuc = danhMuc_selectAll();

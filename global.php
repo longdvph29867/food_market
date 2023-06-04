@@ -1,5 +1,5 @@
 <?php
-    $url="/xshop";
+    $url="/food_market_10-diem";
     $url_content="$url/content";
     $url_site="$url/site";
     $url_admin="$url/admin";
@@ -18,4 +18,5 @@
 
     date_default_timezone_set('Asia/Ho_Chi_Minh');
     $TODAY = date('Y-m-d');
+
 ?>
