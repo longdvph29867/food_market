@@ -75,7 +75,7 @@
 
                 <div class="form-group col-6">
                     <label for="ngay_nhap">Ngày nhập</label>
-                    <input type="date" name="ngay_nhap" id="ngay_nhap" class="form-control" value="<?=$thisHangHoa['ngay_nhap']?>">
+                    <input type="date" name="ngay_nhap" id="ngay_nhap" class="form-control" value="<?=$thisHangHoa['ngay_nhap']?>" readonly>
                     <small id="helpId" class="text-danger">Help text</small>
                 </div>
 

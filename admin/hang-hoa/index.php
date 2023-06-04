@@ -16,7 +16,7 @@
         $ten_hh = $_POST['ten_hh'];
         $don_gia =  $_POST['don_gia'];
         $giam_gia =  $_POST['giam_gia'];
-        $ngay_nhap =  $_POST['ngay_nhap'];
+        $ngay_nhap = $TODAY;
         $mo_ta =  $_POST['mo_ta'];
         $dac_biet =  $_POST['dac_biet'];
         $ma_loai =  $_POST['ma_loai'];
@@ -40,7 +40,7 @@
         $ten_hh = $_POST['ten_hh'];
         $don_gia =  $_POST['don_gia'];
         $giam_gia =  $_POST['giam_gia'];
-        $ngay_nhap =  $_POST['ngay_nhap'];
+        $ngay_nhap =  $TODAY;
         $mo_ta =  $_POST['mo_ta'];
         $dac_biet =  $_POST['dac_biet'];
         $ma_loai =  $_POST['ma_loai'];

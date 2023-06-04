@@ -15,4 +15,7 @@
         move_uploaded_file($file_uploaded['tmp_name'], $target_path);
         return $file_name;
     }
+
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+    $TODAY = date('Y-m-d');
 ?>
