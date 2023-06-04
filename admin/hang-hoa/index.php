@@ -35,6 +35,7 @@
         $view_name="edit.php";
     }
     else if(exsist_param("btn-update")){
+        
         $up_hinh = save_file('file', "$image_dir/image_products/");
         $hinh =  strlen($up_hinh) > 0 ? $up_hinh : $_POST['old_hinh'];
 

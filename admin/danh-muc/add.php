@@ -6,12 +6,11 @@
             <div class="form-group">
                 <label for="">Mã Loại</label>
                 <input type="text" name="" class="form-control" value="Auto number" readonly>
-                <small id="helpId" class="text-danger">Help text</small>
             </div>
             <div class="form-group">
                 <label for="tenLoai">Tên Loại</label>
-                <input type="text" name="ten-loai" id="tenLoai" class="form-control" placeholder="">
-                <small id="helpId" class="text-danger">Help text</small>
+                <input type="text" name="ten_loai" id="tenLoai" class="form-control">
+                <small id="helpId" class="text-danger"><?php if(!empty($errors['ten_loai'])){echo $errors['ten_loai'];}?></small>
             </div>
             <button name="btn-insert" class="btn btn-success">Thêm mới</button>
             <button type="reset" class="btn btn-dark">Nhập lại</button>
