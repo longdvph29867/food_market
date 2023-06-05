@@ -1,4 +1,4 @@
-<form action="index.php" method="post" class="flex flex-col text-[#333]">
+<form action="index.php" method="post"  enctype="multipart/form-data" class="flex flex-col text-[#333]">
     <h3 class=" text-2xl mb-6">Đăng ký</h3>
     <div class="flex flex-col mb-4">
         <label for="username">Tài khoản</label>
@@ -26,9 +26,9 @@
     </div>
     <div class="flex justify-between items-end">
         <div>
-            <button name="btn_insert" class="text-white text-base uppercase font-semibold bg-[#62d2a2] py-2 px-2 rounded mt-3">Đăng ký</button>
+            <button name="btn_register" class="text-white text-base uppercase font-semibold bg-[#62d2a2] py-2 px-2 rounded mt-3">Đăng ký</button>
             <button type="reset" class="text-white text-base uppercase font-semibold bg-gray-600 py-2 px-2 rounded mt-3">Reset</button>
         </div>
-        <button name="btn_login" class="text-xs text-[#62d2a2]">Bạn đã có tài khoản?</button>
+        <a href="<?=$url_site?>/tai-khoan/dang-nhap" class="text-xs text-[#62d2a2]">Bạn đã có tài khoản?</a>
     </div>
 </form>

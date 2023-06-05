@@ -16,9 +16,10 @@
         $items = hanghoa_selectAll();
     }
     
-    $view_name = 'liet-ke-ui.php';
+    $list = 'liet-ke-ui.php';
+    $view_name = '../content-layout.php';
     $dsloai = danhMuc_selectAll();
 
-    require '../layout2.php'
+    require '../layout.php'
 ?>
 

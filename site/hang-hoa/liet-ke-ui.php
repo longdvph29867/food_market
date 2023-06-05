@@ -14,17 +14,20 @@
     <!--  -->
     <?php
         foreach($items as $item) {
+            $link = $url_site."/hang-hoa/chi-tiet.php?ma_hh=".$item['ma_hh'];
     ?>
-        <div class="product_item">
-            <div class="product_img">
-                <img src="<?php echo "$url_content/images/image_products/".$item['hinh'] ?>" alt="">
+        <a href="<?=$link?>">
+            <div class="product_item">
+                <div class="product_img">
+                    <img src="<?php echo "$url_content/images/image_products/".$item['hinh'] ?>" alt="">
+                </div>
+                <div class="product_content">
+                    <h3><?=$item['ten_hh']?></h3>
+                    <hr>
+                    <p><span>$ <?=$item['don_gia']?></span>/1kg</p>
+                </div>
             </div>
-            <div class="product_content">
-                <h3><?=$item['ten_hh']?></h3>
-                <hr>
-                <p><span>$ <?=$item['don_gia']?></span>/1kg</p>
-            </div>
-        </div>
+        </a>
     <?php
         }
     ?>

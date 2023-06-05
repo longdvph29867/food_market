@@ -48,4 +48,8 @@
         return pdo_query($sql, '%'.$keyword.'%', '%'.$keyword.'%');
     }
 
+    function hang_hoa_tang_so_luot_xem ($ma_hh) {
+        $sql = "UPDATE hang_hoa SET so_luot_xem = so_luot_xem + 1 WHERE hang_hoa.ma_hh = ?";
+        pdo_execute($sql,$ma_hh);
+    }
 ?>

@@ -45,4 +45,12 @@ function binhLuan_delete($ma_bl){
         pdo_execute($sql,$ma_bl);
     }
 }
+
+
+// ----------
+function binhLuan_select_by_hh_ngay_giam($ma_hh){
+    $sql="SELECT binh_luan.*, khach_hang.ho_ten, khach_hang.hinh FROM binh_luan JOIN khach_hang on khach_hang.ma_kh = binh_luan.ma_kh WHERE binh_luan.ma_hh = ? ORDER BY ngay_bl DESC";
+    return pdo_query($sql,$ma_hh);
+}
+
 ?>

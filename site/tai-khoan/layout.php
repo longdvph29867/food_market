@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="w-screen h-screen flex items-center justify-center bg-gray-400 px-5 
-    bg-[url('../../content/image-layout/bg-login.jpg')]
+    bg-[url('<?=$url_content?>/image-layout/bg-login.jpg')]
     bg-cover
     bg-center
     relative

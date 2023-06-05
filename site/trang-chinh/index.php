@@ -11,8 +11,10 @@
         require "../layout.php";
     }
     else if(exsist_param('san-pham')) {
-        $view_name = 'layout2/list-products.php';
-        require "../layout2.php";
+        $list = 'layout2/list-products.php';
+        $view_name = "../content-layout.php";
+
+        require "../layout.php";
     }
     else {
         $view_name = 'trang-chinh/home/home.php';

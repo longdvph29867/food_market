@@ -54,7 +54,7 @@
                     <!-- search -->
                     <?php require "trang-chinh/search.php"?>
                     <!-- tai khoan -->
-                    <?php require "trang-chinh/tai-khoan/tai-khoan-desktop.php"?>
+                    <?php require "tai-khoan/tai-khoan-desktop.php"?>
                 <div class="cart_header relative">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="quantity_cart">16</span>
@@ -79,7 +79,7 @@
                 <h3 class="lg:hidden text-lg text-white font-semibold py-2">MENU</h3>
                 <nav class="hidden lg:flex items-center menu">
                     <ul class="flex">
-                        <li><a href="index.php">Trang chủ</a></li>
+                        <li><a href="<?=$url_site?>/trang-chinh/index.php">Trang chủ</a></li>
                         <li class="menu_item ">
                             <a href="#">Danh mục <i class="fa-solid fa-chevron-down"></i></a>
                             <ul class="child_menu">
@@ -87,8 +87,8 @@
                                 <?php require "trang-chinh/danh-muc-header.php"?>
                             </ul>
                         </li>
-                        <li><a href="index.php?san-pham">Sản phẩm</a></li>
-                        <li><a href="index.php?tin-tuc">Tin tức</a></li>
+                        <li><a href="<?=$url_site?>/trang-chinh/index.php?san-pham">Sản phẩm</a></li>
+                        <li><a href="<?=$url_site?>/trang-chinh/index.php?tin-tuc">Tin tức</a></li>
                         <li><a href="#">Liên hệ</a></li>
                     </ul>
                 </nav>
@@ -118,7 +118,7 @@
                     <li><a href="#">Liên hệ</a></li>
                     <li class="flex justify-center pb-2 items-center">
                         <!-- tai khoan mobile -->
-                        <?php require "trang-chinh/tai-khoan/tai-khoan-mobile.php"?>
+                        <?php require "tai-khoan/tai-khoan-mobile.php"?>
                     </li>
                 </ul>
             </nav>
