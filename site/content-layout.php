@@ -18,10 +18,10 @@
                 <div class="w-full lg:w-1/4 px-4 mt-8 lg:mt-0">
                     <div class="flex mx-[-16px] flex-col lg:flex-col sm:flex-row">
                         <!-- category -->
-                        <?php require "trang-chinh/layout2/danh-muc-layout2.php" ?>
+                        <?php require "items-content/danh-muc-layout2.php" ?>
 
                         <!-- top products -->
-                        <?php require "trang-chinh/layout2/top-10-layout2.php" ?>
+                        <?php require "items-content/top-10-layout2.php" ?>
                         
                     </div>
                 </div>

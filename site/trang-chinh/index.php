@@ -11,7 +11,7 @@
         require "../layout.php";
     }
     else if(exsist_param('san-pham')) {
-        $list = 'layout2/list-products.php';
+        $list = 'items-content/list-products.php';
         $view_name = "../content-layout.php";
 
         require "../layout.php";

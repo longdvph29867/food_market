@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th6 03, 2023 lúc 06:51 PM
+-- Thời gian đã tạo: Th6 05, 2023 lúc 05:55 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.0.25
 
@@ -40,7 +40,12 @@ CREATE TABLE `binh_luan` (
 --
 
 INSERT INTO `binh_luan` (`ma_bl`, `noi_dung`, `ma_hh`, `ma_kh`, `ngay_bl`) VALUES
-(14, 'dcscds', 35, 'hytygefu', '2023-06-03');
+(14, 'dcscds', 35, 'hytygefu', '2023-06-03'),
+(15, 'good', 36, 'myjuw', '2023-06-04'),
+(16, 'ngon re', 36, 'qekix', '2023-06-05'),
+(17, 'gia rat re', 36, '123', '2023-06-01'),
+(18, 'duoc cua nó', 36, 'hytygefu', '2023-06-09'),
+(19, 'ofdfdfdfd fdfdfdfd fdfdfdfd', 36, 'hytygefu', '2023-06-02');
 
 -- --------------------------------------------------------
 
@@ -66,22 +71,22 @@ CREATE TABLE `hang_hoa` (
 --
 
 INSERT INTO `hang_hoa` (`ma_hh`, `ten_hh`, `don_gia`, `giam_gia`, `hinh`, `ngay_nhap`, `mo_ta`, `dac_biet`, `so_luot_xem`, `ma_loai`) VALUES
-(28, 'Thịt ba rọi heo', 140000.00, 10000.00, 'thit_ba-roi-heo.png', '2023-06-03', 'Thịt ba chỉ (hay còn gọi là ba rọi) là phần thịt heo được cắt ra từ bụng, không có xương và nhiều mỡ. Sỡ dĩ người ta thường gọi thịt ba chỉ là bởi khi cắt ngang sẽ thấy được phần thịt và mỡ xen kẽ 3 lớp với nhau theo thứ tự lớp thịt, mỡ rồi lại đến lớp thịt', 0, 0, 16),
+(28, 'Thịt ba rọi heo', 140000.00, 10000.00, 'thit_ba-roi-heo.png', '2023-06-03', 'Thịt ba chỉ (hay còn gọi là ba rọi) là phần thịt heo được cắt ra từ bụng, không có xương và nhiều mỡ. Sỡ dĩ người ta thường gọi thịt ba chỉ là bởi khi cắt ngang sẽ thấy được phần thịt và mỡ xen kẽ 3 lớp với nhau theo thứ tự lớp thịt, mỡ rồi lại đến lớp thịt', 0, 17, 16),
 (29, 'Móng giò', 99000.00, 5000.00, 'thit_mong-gio.png', '2023-06-03', 'Phần móng giò trắng nõn được sơ chế và pha lóc khéo léo, mang trọn hương vị của phần da dẻo mềm mềm, lớp gân giòn và thịt ngọt thơm ngon. Móng giò rất giàu Protit, sau khi đưa vào cơ thể sẽ có tác dụng hiệu quả trong việc cải thiện chức năng sinh lý của các cơ quan nội tạng, làm cho các tế bào da giữ được nước nên đỡ bị khô nhăn, khiến cho da bóng và căng', 1, 0, 16),
 (30, 'Thịt heo xay', 110000.00, 2000.00, 'thit_heo-xay.png', '2023-06-03', 'Loại thịt rất quen thuộc với mỗi bà nội trợ nhờ độ linh hoạt cao trong chế biến, lại nhanh thấm gia vị và có khả năng kết hợp hài hòa với hầu hết các loại rau củ, cho các đầu bếp tại gia thỏa sức biến tấu. Sản phẩm được kết hợp từ thịt nạc và mỡ tươi sạch tạo sự hài hòa cho hương vị và sự an tâm tuyệt đối về chất lượng cho các món ăn', 0, 0, 16),
-(31, 'Sườn heo', 160000.00, 12000.00, 'thit_suon-heo.png', '2023-06-03', 'Sườn hồng tươi với sụn giòn rụm cùng thịt mềm căng mọng được tuyển chọn kỹ lưỡng từ tảng sườn ngon nhất. Là nguyên liệ hảo hạng cho món ngon đúng điệu. Sườn heo là bộ phận chứa nhiều các chất dinh dưỡng như protein, vitamin B12, kẽm, sắt và chất béo không bão hòa như Omega-3 giúp cung cấp cho cơ thể loạt các vi chất cần thiết', 1, 0, 16),
+(31, 'Sườn heo', 160000.00, 12000.00, 'thit_suon-heo.png', '2023-06-03', 'Sườn hồng tươi với sụn giòn rụm cùng thịt mềm căng mọng được tuyển chọn kỹ lưỡng từ tảng sườn ngon nhất. Là nguyên liệ hảo hạng cho món ngon đúng điệu. Sườn heo là bộ phận chứa nhiều các chất dinh dưỡng như protein, vitamin B12, kẽm, sắt và chất béo không bão hòa như Omega-3 giúp cung cấp cho cơ thể loạt các vi chất cần thiết', 1, 1, 16),
 (32, 'Bắp giò heo', 125000.00, 0.00, 'thit_bap-gio-heo.png', '2023-06-03', 'Chân giò heo tiêu chuẩn về an toàn toàn thực phẩm. Giò heo săn chắc, thịt có sự kết hợp với gân mỡ nên ăn béo ngậy và thơm, thích hợp để hầm canh, nấu các món nước như hủ tiếu, bánh canh. Do chân hoạt động nhiều nên phần thịt sẽ mỏng, mềm, ngọt và có nhiều gân hơn vì vậy mà khi chế biến các món hầm, giả cầy, luộc,... sẽ mềm, thấm gia vị và ngon hơn', 1, 0, 16),
-(33, 'Đuôi heo', 75000.00, 3000.00, 'thit_duoi-heo.png', '2023-06-03', 'Đuôi heo bao gồm cả phần xương đuôi. Phần đuôi gồm chủ yếu là thịt và mỡ, được bao quanh bởi da. Xương và các mẩu sụn nhỏ ở các đầu khớp nối tạo độ giòn khi thưởng thức. Trong thực đơn gia đình thì đây là nguyên liệu lý tưởng cho các món hầm, ninh nhừ để đem lại những món ăn thơm ngon, hương vị đậm đà nhưng không hề béo', 0, 0, 16),
+(33, 'Đuôi heo', 75000.00, 3000.00, 'thit_duoi-heo.png', '2023-06-03', 'Đuôi heo bao gồm cả phần xương đuôi. Phần đuôi gồm chủ yếu là thịt và mỡ, được bao quanh bởi da. Xương và các mẩu sụn nhỏ ở các đầu khớp nối tạo độ giòn khi thưởng thức. Trong thực đơn gia đình thì đây là nguyên liệu lý tưởng cho các món hầm, ninh nhừ để đem lại những món ăn thơm ngon, hương vị đậm đà nhưng không hề béo', 0, 1, 16),
 (34, 'Nạc vai heo', 105000.00, 1000.00, 'thit_vai-heo.png', '2023-06-03', 'Nạc vai heo là phần thịt đặc trưng được lấy từ đùi trước (vai) của heo. Nạc vai còn bao gồm một phần đầu của thăn ngoại heo (đầu mềm). Chất lượng thịt heo đạt chất lượng cao nhất, thịt heo đều được Cơ quan thú y nhà nước kiểm tra, đóng dấu trước khi đưa ra thị trường tiêu thụ', 1, 0, 16),
 (35, 'Bắp bò Úc', 355000.00, 19000.00, 'thit_bap-bo-uc.png', '2023-06-03', 'Bắp bò Úc luôn là được xếp trong danh sách dòng sản phẩm best seller ở mọi cửa hàng trong hệ thống. Với thực đơn chế biến đa dạng như bò kho, bò hầm, bò sốt vang, bò luộc, bò xào, bò nướng, bò hấp, sản phẩm đáp ứng nhu cầu ẩm thực phong phú của nhiều gia đình Việt. Hãy đến với Food Market ngay hôm nay để được mua hàng với mức giá tốt nhất', 1, 0, 16),
-(36, 'Ba chỉ bò nhập khẩu', 515000.00, 29000.00, 'thit_ba-chi-bo.png', '2023-06-03', 'Ba chỉ bò là phần thịt được lấy từ phần bụng của con bò, là phần thịt với những dải thịt nạc và thịt mỡ xen kẽ nhau tạo nên độ mềm, ngậy, ngọt nhưng hoàn toàn không ngấy. Bò nhập khẩu rất dễ chế biến. Những món ăn nấu từ thịt ba chỉ bò cũng rất đơn giản như xào, lẩu, cuốn cải nướng, cuốn nấm kim châm nướng, nhúng giấm hay làm salat', 1, 0, 16),
-(37, 'Thăn ngoại bò Úc', 489000.00, 12000.00, 'thit_than-ngoai-bo-uc.png', '2023-06-03', 'Là sự xen kẽ hoàn hảo giữa lớp thịt và lớp mỡ trên miếng thịt bò tạo nên những hình vân cẩm thạch đẹp mắt.Thịt bò mềm, mọng nước, hợp để làm steak hoặc nhúng lẩu. Thăn ngoại bò vốn nổi tiếng là loại thịt bò cao cấp nhất trên thế giới. Các đường vân mỡ – nạc đan xen đều đặn tựa như đường vân cẩm thạch', 0, 0, 16),
-(38, 'Gầu bò Úc', 348000.00, 0.00, 'thit_gau-bo-uc.png', '2023-06-03', 'Gầu bò Úc hay còn gọi là nạm bò, ức bò (Brisket) là sản phẩm nhập khẩu trực tiếp từ các thương hiệu thịt bò hàng đầu của Úc với đầy đủ tem nhãn của nhà sản xuất và dấu kiểm định của Chi Cục Thú Y. Quá trình sơ chế, đóng khay, cấp đông Bò Úc vệ sinh sạch sẽ đảm bảo chất lượng, an toàn cho sức khỏe người tiêu dùng. Gầu Bò Úc được pha cắt bằng máy bào công nghiệp, bào lẩu theo tiêu chuẩn độ dày 1,5mm cho món lẩu.', 1, 0, 16),
-(39, 'Gà đồi', 132000.00, 11000.00, 'thit_ga-doi.png', '2023-06-03', 'Thịt gà đồi thường có cấu trúc cơ bắp chắc chắn và mềm mại, với một lượng mỡ ít hơn so với các loại gà nuôi công nghiệp. Do được nuôi trong môi trường tự nhiên, gà đồi thường có cơ bắp phát triển tự nhiên hơn và thường được cho ăn các nguồn thức ăn tự nhiên như cỏ, hạt, sâu, giun và côn trùng. Thịt gà đồi là một nguồn cung cấp protein chất lượng cao, vitamin B6, vitamin B12, selen và các khoáng chất khác. Nó là một lựa chọn ăn uống lành mạnh và giàu dinh dưỡng', 0, 0, 16),
-(40, 'Cánh gà', 102000.00, 3000.00, 'thit_canh-ga.png', '2023-06-03', 'Cánh gà là một phần thịt được lấy từ cánh của con gà. Đây là một phần thịt thường được ưa chuộng và sử dụng phổ biến trong ẩm thực nhiều quốc gia trên thế giới. Cánh gà có cấu trúc xương và thịt cân đối. Phần thịt trên cánh gà thường là mềm mại và có một lượng mỡ nhất định, tạo ra hương vị thơm ngon và độ mềm phù hợ', 1, 0, 16),
+(36, 'Ba chỉ bò nhập khẩu', 515000.00, 29000.00, 'thit_ba-chi-bo.png', '2023-06-03', 'Ba chỉ bò là phần thịt được lấy từ phần bụng của con bò, là phần thịt với những dải thịt nạc và thịt mỡ xen kẽ nhau tạo nên độ mềm, ngậy, ngọt nhưng hoàn toàn không ngấy. Bò nhập khẩu rất dễ chế biến. Những món ăn nấu từ thịt ba chỉ bò cũng rất đơn giản như xào, lẩu, cuốn cải nướng, cuốn nấm kim châm nướng, nhúng giấm hay làm salat', 1, 11, 16),
+(37, 'Thăn ngoại bò Úc', 489000.00, 12000.00, 'thit_than-ngoai-bo-uc.png', '2023-06-03', 'Là sự xen kẽ hoàn hảo giữa lớp thịt và lớp mỡ trên miếng thịt bò tạo nên những hình vân cẩm thạch đẹp mắt.Thịt bò mềm, mọng nước, hợp để làm steak hoặc nhúng lẩu. Thăn ngoại bò vốn nổi tiếng là loại thịt bò cao cấp nhất trên thế giới. Các đường vân mỡ – nạc đan xen đều đặn tựa như đường vân cẩm thạch', 0, 2, 16),
+(38, 'Gầu bò Úc', 348000.00, 0.00, 'thit_gau-bo-uc.png', '2023-06-03', 'Gầu bò Úc hay còn gọi là nạm bò, ức bò (Brisket) là sản phẩm nhập khẩu trực tiếp từ các thương hiệu thịt bò hàng đầu của Úc với đầy đủ tem nhãn của nhà sản xuất và dấu kiểm định của Chi Cục Thú Y. Quá trình sơ chế, đóng khay, cấp đông Bò Úc vệ sinh sạch sẽ đảm bảo chất lượng, an toàn cho sức khỏe người tiêu dùng. Gầu Bò Úc được pha cắt bằng máy bào công nghiệp, bào lẩu theo tiêu chuẩn độ dày 1,5mm cho món lẩu.', 1, 2, 16),
+(39, 'Gà đồi cao lãnh', 132000.00, 11000.00, 'thit_ga-doi.png', '2023-06-03', 'Thịt gà đồi thường có cấu trúc cơ bắp chắc chắn và mềm mại, với một lượng mỡ ít hơn so với các loại gà nuôi công nghiệp. Do được nuôi trong môi trường tự nhiên, gà đồi thường có cơ bắp phát triển tự nhiên hơn và thường được cho ăn các nguồn thức ăn tự nhiên như cỏ, hạt, sâu, giun và côn trùng. Thịt gà đồi là một nguồn cung cấp protein chất lượng cao, vitamin B6, vitamin B12, selen và các khoáng chất khác. Nó là một lựa chọn ăn uống lành mạnh và giàu dinh dưỡng', 0, 0, 16),
+(40, 'Cánh gà', 102000.00, 3000.00, 'thit_canh-ga.png', '2023-06-03', 'Cánh gà là một phần thịt được lấy từ cánh của con gà. Đây là một phần thịt thường được ưa chuộng và sử dụng phổ biến trong ẩm thực nhiều quốc gia trên thế giới. Cánh gà có cấu trúc xương và thịt cân đối. Phần thịt trên cánh gà thường là mềm mại và có một lượng mỡ nhất định, tạo ra hương vị thơm ngon và độ mềm phù hợ', 1, 4, 16),
 (41, 'Đùi gà', 113000.00, 8000.00, 'thit_dui-ga.png', '2023-06-03', 'Đùi gà là một phần thịt được lấy từ phần đùi hoặc chân sau của con gà. Đây là một phần thịt gà phổ biến và được sử dụng rộng rãi trong ẩm thực. Khi chế biến, đùi gà có thể được nướng, quay, rán hoặc hấp theo nhiều phong cách khác nhau. Đùi gà thường được tẩm gia vị hoặc sốt để tăng cường hương vị và độ ngon. Đùi gà cũng thích hợp để làm món chính hoặc món ăn nhẹ', 1, 0, 16),
-(42, 'Sườn cừu mông cổ', 720000.00, 32000.00, 'thit_suon-cuu.png', '2023-06-03', 'Sườn cừu Mông Cổ là một sản phẩm thịt từ phần sườn của Cừu Mông Cổ, một loại gia súc được nuôi chủ yếu ở Mông Cổ. Đây là một phần thịt ngon, giàu dinh dưỡng và có một hương vị đặc trưng. Sườn cừu Mông Cổ thường có cấu trúc xương dài và thịt mềm, có nhiều mỡ ở giữa, giúp tạo ra một hương vị giàu mỡ và thơm ngon. Phần thịt được cắt từ sườn cừu thường có lớp mỡ mỏng bao quanh, làm tăng hương vị và giữ cho thịt mềm và không khô', 1, 0, 16),
-(43, 'Cá Mập Cambodia', 32000.00, 323223.00, 'slide-ca-tuoi-removebg-preview.png', '2023-06-03', 'scacsaccascascscaca', 1, 0, 17);
+(42, 'Sườn cừu mông cổ', 720000.00, 32000.00, 'thit_suon-cuu.png', '2023-06-03', 'Sườn cừu Mông Cổ là một sản phẩm thịt từ phần sườn của Cừu Mông Cổ, một loại gia súc được nuôi chủ yếu ở Mông Cổ. Đây là một phần thịt ngon, giàu dinh dưỡng và có một hương vị đặc trưng. Sườn cừu Mông Cổ thường có cấu trúc xương dài và thịt mềm, có nhiều mỡ ở giữa, giúp tạo ra một hương vị giàu mỡ và thơm ngon. Phần thịt được cắt từ sườn cừu thường có lớp mỡ mỏng bao quanh, làm tăng hương vị và giữ cho thịt mềm và không khô', 1, 3, 16),
+(43, 'Cá Mập Cambodia', 32000.00, 323223.00, 'slide-ca-tuoi-removebg-preview.png', '2023-06-03', 'Cá Mập Cambodia là một sản phẩm độc đáo được chế biến từ cá mập tươi ngon, nổi tiếng từ vùng biển Cambodia. Sản phẩm này mang đến cho bạn trải nghiệm ẩm thực độc đáo với hương vị đậm đà và thịt cá mập mềm mịn. Với sự kết hợp hoàn hảo giữa phương pháp chế biến truyền thống và công nghệ hiện đại, \"Cá Mập Cambodia\" là một món ăn tuyệt vời để khám phá hương vị biển cả và nền ẩm thực', 1, 8, 17);
 
 -- --------------------------------------------------------
 
@@ -104,8 +109,13 @@ CREATE TABLE `khach_hang` (
 --
 
 INSERT INTO `khach_hang` (`ma_kh`, `mat_khau`, `ho_ten`, `kich_hoat`, `hinh`, `email`, `vai_tro`) VALUES
+('123', 'Pa$$w0rd!', 'cuong', 1, 'Avatar Image.png', 'woxyvi@mailinator.com', 1),
+('admin', 'admin', 'admin', 1, 'user2.jpeg', 'admin@gmail.com', 1),
 ('hytygefu', 'Pa$$w0rd!', 'lesajyten', 0, 'user2.jpeg', 'razof@mailinator.com', 0),
-('kh2', 'Pa$$w0rd!', 'Quên rồi', 0, '', 'gygiq@mailinator.com', 1);
+('kevaca', 'Pa$$w0rd!', 'Voluptatem quia aspe', 0, 'image.png', 'kurijygyr@mailinator.com', 0),
+('myjuw', 'Pa$$w0rd!', 'mungloli', 1, 'Avatar Image (3).png', 'mykikox@mailinator.com', 0),
+('qekix', 'Pa$$w0rd!', 'hien', 0, 'Avatar Image (1).png', 'folobyk@mailinator.com', 1),
+('ragaxak', 'Pa$$w0rd!', 'Perspiciatis asperi', 0, '1.1-removebg-preview.png', 'xynymenok@mailinator.com', 0);
 
 -- --------------------------------------------------------
 
@@ -172,13 +182,13 @@ ALTER TABLE `loai`
 -- AUTO_INCREMENT cho bảng `binh_luan`
 --
 ALTER TABLE `binh_luan`
-  MODIFY `ma_bl` int(10) NOT NULL AUTO_INCREMENT COMMENT 'mã bình luận', AUTO_INCREMENT=15;
+  MODIFY `ma_bl` int(10) NOT NULL AUTO_INCREMENT COMMENT 'mã bình luận', AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT cho bảng `hang_hoa`
 --
 ALTER TABLE `hang_hoa`
-  MODIFY `ma_hh` int(11) NOT NULL AUTO_INCREMENT COMMENT 'mã hàng hoá', AUTO_INCREMENT=44;
+  MODIFY `ma_hh` int(11) NOT NULL AUTO_INCREMENT COMMENT 'mã hàng hoá', AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT cho bảng `loai`
