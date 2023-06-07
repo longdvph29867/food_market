@@ -35,4 +35,19 @@
             pdo_execute($sql,$ma_kh);
         }
     }
+
+    function user_register($ma_kh, $mat_khau, $ho_ten, $hinh, $email){
+        $sql="INSERT INTO `khach_hang`(`ma_kh`, `mat_khau`, `ho_ten`, `kich_hoat`, `hinh`, `email`, `vai_tro`) VALUES ( ?, ?, ?, '0', ?, ?, '0')";
+        pdo_execute($sql, $ma_kh, $mat_khau, $ho_ten, $hinh, $email);
+    }
+
+    function user_update($ma_kh, $ho_ten, $hinh, $email) {
+        $sql="UPDATE khach_hang SET ho_ten = ?, hinh = ?, email = ? WHERE khach_hang.ma_kh = ?";
+        pdo_execute($sql, $ho_ten, $hinh, $email, $ma_kh);
+    }
+
+    function user_change_password($ma_kh, $mat_khau) {
+        $sql="UPDATE khach_hang SET mat_khau = ? WHERE khach_hang.ma_kh = ?";
+        pdo_execute($sql, $mat_khau, $ma_kh);
+    }
 ?>

@@ -17,6 +17,7 @@
     }
     
     $list = 'liet-ke-ui.php';
+    $MESSAGE = 'Sản phẩm';
     $view_name = '../content-layout.php';
     $dsloai = danhMuc_selectAll();
 

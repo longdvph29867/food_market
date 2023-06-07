@@ -26,9 +26,10 @@
     </div>
     <div class="flex justify-between items-end">
         <div>
-            <button name="btn_register" class="text-white text-base uppercase font-semibold bg-[#62d2a2] py-2 px-2 rounded mt-3">Đăng ký</button>
+            <button name="btn_insert" class="text-white text-base uppercase font-semibold bg-[#62d2a2] py-2 px-2 rounded mt-3">Đăng ký</button>
             <button type="reset" class="text-white text-base uppercase font-semibold bg-gray-600 py-2 px-2 rounded mt-3">Reset</button>
         </div>
-        <a href="<?=$url_site?>/tai-khoan/dang-nhap" class="text-xs text-[#62d2a2]">Bạn đã có tài khoản?</a>
+        <a href="index.php?btn_form_login" name="" class="text-xs text-[#62d2a2]">Bạn đã có tài khoản?</a>
+
     </div>
 </form>

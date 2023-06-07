@@ -54,7 +54,7 @@
                     <!-- search -->
                     <?php require "trang-chinh/search.php"?>
                     <!-- tai khoan -->
-                    <?php require "tai-khoan/tai-khoan-desktop.php"?>
+                    <?php require "trang-chinh/dang-nhap/dang-nhap-desktop.php"?>
                 <div class="cart_header relative">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="quantity_cart">16</span>
@@ -116,9 +116,9 @@
                     <li><a href="#">Sản phẩm</a></li>
                     <li><a href="index.php?tin-tuc">Tin tức</a></li>
                     <li><a href="#">Liên hệ</a></li>
-                    <li class="flex justify-center pb-2 items-center">
+                    <li class="flex justify-center pb-2 items-center flex-wrap">
                         <!-- tai khoan mobile -->
-                        <?php require "tai-khoan/tai-khoan-mobile.php"?>
+                        <?php require "trang-chinh/dang-nhap/dang-nhap-mobile.php"?>
                     </li>
                 </ul>
             </nav>
