@@ -3,6 +3,7 @@
     require "../../dao/pdo.php";
     require '../../dao/danhmuc.php';
     require '../../dao/khachHang.php';
+    require '../../dao/hanghoa.php';
 
 
     
@@ -68,7 +69,9 @@
 
     
     $MESSAGE = "Thông tin tài khoản";
-    $view_name = '../content-layout.php';
     $dsloai = danhMuc_selectAll();
+    $top10 = hang_hoa_top_10();
+
+    $view_name = '../content-layout.php';
     require '../layout.php'
 ?>

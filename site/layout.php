@@ -246,8 +246,8 @@
                 slidesToScroll: 1,
                 arrows: true,
                 dots: false,
-                // autoplay: true,
-                autoplaySpeed: 5000,
+                autoplay: true,
+                autoplaySpeed: 3000,
             });
             $('.categorys_carousel').slick({
                 infinite: true,

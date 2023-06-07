@@ -18,9 +18,10 @@
     
     $list = 'liet-ke-ui.php';
     $MESSAGE = 'Sản phẩm';
-    $view_name = '../content-layout.php';
     $dsloai = danhMuc_selectAll();
-
+    $top10 = hang_hoa_top_10();
+    
+    $view_name = '../content-layout.php';
     require '../layout.php'
 ?>
 

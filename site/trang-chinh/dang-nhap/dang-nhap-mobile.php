@@ -1,17 +1,29 @@
 <?php
-if (!isset($_SESSION['user'])) {
-?>  
+if (exsist_param("btn_logout")) {
+    session_unset();
+    // delete_cookie('ma_kh');
+    // delete_cookie('mat_khau');
+    delete_cookie('info-user');
+    header("location: $url_site/trang-chinh");
+}
+
+if (isset($_SESSION['user'])) {
+?>
     <div class="user_header">
-        <img src="<?= $url_content ?>/image-layout/user.png" alt="">
+        <img src="<?php echo "$url_content/images/image_user/$info_user[hinh]";?>" alt="">
     </div>
-    <button class="btn2 ml-2">Thông tin</button>
-    <button class="btn2 mx-2 ">Quản lý</button>
-    <button class="btn2 ">Đăng xuất</button>
+    <a href="<?php echo "$url_site/info-user"?>" class="btn2 ml-2">Thông tin</a>
+    <?php
+    if ($info_user['vai_tro']) {
+        echo "<a href='$url_admin" . "/trang-chinh' class='btn2 mx-2 '>Quản lý</a>";
+    }
+    ?>
+    <a href="?btn_logout" class="btn2 ml-1">Đăng xuất</a>
 <?php
 } else {
 ?>
-    <a href="<?= $url_site ?>/tai-khoan/dang-nhap" class="btn1 mx-2 ">Đăng nhập</a>
-    <a href="<?= $url_site ?>/tai-khoan/dang-ky" class="btn1 ">Đăng Ký</a>
+    <a href="<?=$url_site?>/tai-khoan/index.php?btn_form_login" class="btn1 mx-2 ">Đăng nhập</a>
+    <a href="<?=$url_site?>/tai-khoan" class="btn1 ">Đăng Ký</a>
 <?php
 }
 ?>

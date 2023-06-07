@@ -52,4 +52,13 @@
         $sql = "UPDATE hang_hoa SET so_luot_xem = so_luot_xem + 1 WHERE hang_hoa.ma_hh = ?";
         pdo_execute($sql,$ma_hh);
     }
+
+    function hang_hoa_top_10() {
+        $sql = "SELECT * FROM `hang_hoa` ORDER BY so_luot_xem DESC LIMIT 10";
+        return pdo_query($sql);
+    }
+    function hang_hoa_dac_biet() {
+        $sql = "SELECT * FROM `hang_hoa` WHERE dac_biet = 1";
+        return pdo_query($sql);
+    }
 ?>
