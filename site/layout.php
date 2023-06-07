@@ -49,7 +49,9 @@
         lg:pt-0
         md:flex-row
         ">
-            <img class="w-56" src="<?=$url_content?>/image-layout/logo3.png" alt="">
+            <a href="<?=$url_site?>/trang-chinh/index.php">
+                <img class="w-56" src="<?=$url_content?>/image-layout/logo3.png" alt="">
+            </a>
             <div class="flex items-center">
                     <!-- search -->
                     <?php require "trang-chinh/search.php"?>

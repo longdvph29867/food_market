@@ -14,16 +14,16 @@
     <div class="container mx-auto">
         <div class="grid grid-cols-1 gap-8 min-h-[400px] lg:grid-cols-5">
             <div class="col-span-1 lg:col-span-2 border-2 border-[#e5e5e5] max-w-[500px] w-full mx-auto bg-white">
-                <img class="w-full h-full object-cover" src="<?php echo "$url_content/images/image_products/$hinh" ?>" alt="">
+                <img class="w-full h-full object-cover" src="<?php echo "$url_content/images/image_products/$hang_hoa[hinh]" ?>" alt="">
             </div>
             <div class="col-span-1 lg:col-span-3 py-3">
                 <h3 class="text-3xl hover:text-[#62d2a2]">
-                    <?= $ten_hh ?>
+                    <?= $hang_hoa['ten_hh'] ?>
                 </h3>
                 <div class="w-28 h-[1px] bg-gray-300 my-3 duration-300"></div>
-                <p class="text-[#62d2a2] text-xl font-bold"><?php echo number_format($don_gia) ?> đ</p>
+                <p class="text-[#62d2a2] text-xl font-bold"><?php echo number_format($hang_hoa['don_gia']) ?> đ</p>
                 <p class="py-5 text-[#666]">
-                    <?= $mo_ta ?>
+                    <?= $hang_hoa['mo_ta'] ?>
                 </p>
                 <div class="flex items-center flex-col sm:flex-row">
                     <form class="flex items-center flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
@@ -53,7 +53,7 @@
 
                 </div>
                 <h5 class="text-sm my-3">
-                    Lượt xem: <span class="text-[#62d2a2] text-lg font-semibold"><?= $so_luot_xem ?></span>
+                    Lượt xem: <span class="text-[#62d2a2] text-lg font-semibold"><?= $hang_hoa['so_luot_xem'] ?></span>
                 </h5>
                 <h5 class="text-sm my-3">
                     Trạng thái: <span class="text-[#62d2a2] text-lg font-semibold">Còn hàng</span>
@@ -133,16 +133,26 @@
 
             </div>
             <div class="absolute bottom-0 left-0 w-full px-12 py-3  bg-green-100 border-[#62d2a2] border-t-transparent" style="border-width: 1px;">
-                <!-- <form action="" class="w-full flex">
-                        <input type="text" name="" id="username" placeholder="Nhập bình luận"
-                        class="w-full text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded"
-                        style="border-width: 1px;"
-                        >
-                        <button class="btn1 ml-2">
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-                    </form> -->
-                <h3 class="font-medium">Vui lòng đăng nhập để bình luận về sản phẩm này</h3>
+                <?php
+                if (isset($_SESSION['user'])) {
+                    ?>
+                    <form action="chi-tiet.php?ma_hh=<?=$hang_hoa['ma_hh']?>" method="post" class="w-full flex">
+                    <input type="text" name="noi_dung" id="username" placeholder="Nhập bình luận"
+                    class="w-full text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded"
+                    style="border-width: 1px;"
+                    >
+                    <button name="btn_binh_luan" class="btn1 ml-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+                <?php
+                }
+                else {
+                ?>
+                    <h3 class="font-medium">Vui lòng đăng nhập để bình luận về sản phẩm này</h3>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </div>
