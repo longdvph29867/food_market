@@ -32,7 +32,7 @@
     }
     else if(exsist_param("btn_update_pass")) {
         if($mat_khau2 != $mat_khau3) {
-            $MESSAGE_ERORR = "Xác nhận mật khẩu mới không đúng!";
+            $MESSAGE_ERROR = "Xác nhận mật khẩu mới không đúng!";
             $list = 'change_pass_form.php';
         }
         else {
@@ -45,17 +45,17 @@
                         $list = 'info-user.php';
                     }
                     catch (Exception $exc) {
-                        $MESSAGE_ERORR = "Đổi mật khẩu thất bại!";
+                        $MESSAGE_ERROR = "Đổi mật khẩu thất bại!";
                         $list = 'info-user.php';
                     }
                 }
                 else {
-                    $MESSAGE_ERORR = "Sai mật khẩu!";
+                    $MESSAGE_ERROR = "Sai mật khẩu!";
                     $list = 'change_pass_form.php';
                 }
             }
             else {
-                $MESSAGE_ERORR = "Sai mã đăng nhập!";
+                $MESSAGE_ERROR = "Sai mã đăng nhập!";
                 $list = 'change_pass_form.php';
             }
         }

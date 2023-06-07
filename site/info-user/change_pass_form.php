@@ -4,8 +4,8 @@
             <form action="index.php" method="post" class="flex flex-col text-[#333] w-full">
                 <h3 class=" text-2xl mb-6">Đổi mật khẩu</h3>
                 <?php
-                if (strlen($MESSAGE_ERORR) > 0) {
-                    echo "<p><i class='fa-solid fa-circle-exclamation text-red-500'></i> $MESSAGE_ERORR</p>";
+                if (strlen($MESSAGE_ERROR) > 0) {
+                    echo "<p><i class='fa-solid fa-circle-exclamation text-red-500'></i> $MESSAGE_ERROR</p>";
                 }
                 ?>
                 <div class="flex flex-col mb-4">

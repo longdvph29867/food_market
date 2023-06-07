@@ -3,8 +3,8 @@
     if(strlen($MESSAGE_SUCCESS) > 0) {
         echo "<p><i class='fa-solid fa-circle-check text-green-500'></i> $MESSAGE_SUCCESS</p>";
     }
-    if(strlen($MESSAGE_ERORR) > 0) {
-        echo "<p><i class='fa-solid fa-circle-check text-green-500'></i> $MESSAGE_ERORR</p>";
+    if(strlen($MESSAGE_ERROR) > 0) {
+        echo "<p><i class='fa-sharp fa-solid fa-circle-exclamation text-red-500'></i> $MESSAGE_ERROR</p>";
     }
 ?>
 <div>

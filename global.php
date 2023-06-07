@@ -13,7 +13,7 @@
     $MESSAGE = "";
     $MESSAGE_CHILD = "";
     $MESSAGE_SUCCESS = "";
-    $MESSAGE_ERORR = "";
+    $MESSAGE_ERROR = "";
     $errors = [];
     function exsist_param($fieldName){
         return array_key_exists($fieldName,$_REQUEST);

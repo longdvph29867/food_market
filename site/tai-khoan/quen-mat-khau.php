@@ -1,26 +1,19 @@
-<form action="index.php" method="post" class="flex flex-col text-[#333]">
-    <h3 class=" text-2xl mb-6">Quên mật khẩu</h3>
+<h3 class=" text-2xl">Quên mật khẩu</h3>
+<div class="min-h-[16px]">
+    <?php
+    if (strlen($MESSAGE_ERROR) > 0) {
+        echo "<p><i class='fa-sharp fa-solid fa-circle-exclamation text-red-500'></i> $MESSAGE_ERROR</p>";
+    }
+    ?>
+</div>
+<form action="index.php" method="post" id="form-get-password" class="flex flex-col text-[#333]">
     <div class="flex flex-col mb-4">
         <label for="username">Tài khoản</label>
-        <input type="text" name="ma_kh" id="username" class="text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded" style="border-width: 1px;">
-        <small class="text-red-500">
-            <?php
-            if (!empty($errors['ma_kh'])) {
-                echo $errors['ma_kh'];
-            }
-            ?>
-        </small>
+        <input type="text" name="ma_kh" id="username" value="<?php if (isset($ma_kh)) echo $ma_kh ?>" class="text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded" style="border-width: 1px;">
     </div>
     <div class="flex flex-col mb-4">
         <label for="email">Địa chỉ Email</label>
-        <input type="email" name="email" id="email" class="text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded" style="border-width: 1px;">
-        <small class="text-red-500">
-            <?php
-            if (!empty($errors['email'])) {
-                echo $errors['email'];
-            }
-            ?>
-        </small>
+        <input type="email" name="email" id="email" value="<?php if (isset($email)) echo $email ?>" class="text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded" style="border-width: 1px;">
     </div>
     <div class="flex justify-between items-end">
         <button name="btn_get_password" class="text-white text-base uppercase font-semibold bg-[#62d2a2] py-2 px-2 rounded mt-3">Tìm lại mật khẩu</button>
