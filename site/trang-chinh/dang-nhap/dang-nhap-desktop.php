@@ -11,7 +11,7 @@ if (isset($_SESSION['user'])) {
     $info_user = $_SESSION['user'];
 ?>
     <div class="user_header ml-2 relative hidden lg:block">
-        <img src="<?php echo "$url_content/images/image_user/$info_user[hinh]";?>" alt="">
+        <img class="h-12 w-12 object-cover" src="<?php echo "$url_content/images/image_user/$info_user[hinh]";?>" alt="">
         <ul class="user_child">
             <li><a href="<?php echo "$url_site/info-user"?>">Thông tin</a></li>
             <?php

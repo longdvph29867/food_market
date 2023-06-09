@@ -48,6 +48,13 @@
         $list_khachHang=khachhang_selectAll();
         $view_name="list.php";
     }
+    else if(exsist_param("btn-delete-all")){
+        $list_id=$_POST['ma_kh'];
+        khachHang_delete($list_id);
+
+        $list_khachHang=khachhang_selectAll();
+        $view_name="list.php";
+    }
     else{
         $list_khachHang=khachhang_selectAll();
         $view_name="list.php";

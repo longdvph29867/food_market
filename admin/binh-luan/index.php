@@ -22,6 +22,16 @@
         // $ten_hh= binhLuan_select_ten_hh($id_hh);
         $view_name="chi_tiet.php";
     }
+    else if(isset($_REQUEST['btn-delete-all'])){
+        $list_id=$_POST['ma_bl'];
+        binhLuan_delete($list_id);
+
+        $id_hh=$_GET['mahh'];
+        $binh_luan=binhLuan_select_ma_hh($id_hh);
+        $ten_hh= hanghoa_select_by_id($id_hh);
+        // $ten_hh= binhLuan_select_ten_hh($id_hh);
+        $view_name="chi_tiet.php";
+    }
     else{
         $list_binhLuan = thong_ke_binh_luan();
         $view_name="list.php";

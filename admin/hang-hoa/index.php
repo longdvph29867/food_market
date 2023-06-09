@@ -55,6 +55,13 @@
         $items = hanghoa_selectAll();
         $view_name="list.php";
     }
+    else if(exsist_param("btn-delete-all")){
+        $list_id=$_POST['ma_hh'];
+        hanghoa_delete($list_id);
+
+        $items = hanghoa_selectAll();
+        $view_name="list.php";
+    }
     else{
         $items = hanghoa_selectAll();
         $view_name="list.php";

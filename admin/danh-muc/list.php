@@ -1,6 +1,6 @@
 
 <div class="container">
-    <form>
+    <form action="index.php" method="post">
     <table class="table">
     <thead>
       <tr>
@@ -31,9 +31,9 @@
   <div>
     <button class="btn btn-primary" id="check-all" type="button">Chọn tất cả</button>
     <button class="btn btn-secondary" id="clear-all" type="button">Bỏ chọn tất cả</button>
-    <button class="btn btn-danger" name="btn-delete-all" >Xóa các mục đã chọn</button>
+    <button class="btn btn-danger" name="btn-delete-all" onclick="return confirm('Bạn có chắc chắn xoá không?')">Xóa các mục đã chọn</button>
     <a href="index.php?add" class="btn btn-success">Thêm mới</a>
   </div>
-    </form>
+  </form>
   
 </div>

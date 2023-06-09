@@ -50,7 +50,7 @@
         $view_name="list.php";
     }
     else if(exsist_param("btn-delete-all")){
-    $list_id = $_GET['ma_loai'];
+    $list_id = $_POST['ma_loai'];
     danhMuc_delete($list_id);
         $items = danhMuc_selectAll();
         $view_name="list.php";
