@@ -4,7 +4,6 @@
     require "../../dao/danhmuc.php";
     require "../../dao/hanghoa.php";
 
-    check_login();
     extract($_REQUEST);
     if(exsist_param("add")){
         $lisDanhMuc = danhMuc_selectAll();
@@ -36,21 +35,18 @@
         $view_name="edit.php";
     }
     else if(exsist_param("btn-update")){
-        $up_hinh = save_file('file', "$image_dir/image_products/");
-        $hinh =  strlen($up_hinh) > 0 ? $up_hinh : $_POST['old_hinh'];
+        require "./validate_hang_hoa.php";
 
-        $ma_hh = $_POST['ma_hh'];
-        $ten_hh = $_POST['ten_hh'];
-        $don_gia =  $_POST['don_gia'];
-        $giam_gia =  $_POST['giam_gia'];
-        $ngay_nhap =  $TODAY;
-        $mo_ta =  $_POST['mo_ta'];
-        $dac_biet =  $_POST['dac_biet'];
-        $ma_loai =  $_POST['ma_loai'];
+        if(empty($errors)){
         hanghoa_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ngay_nhap, $mo_ta, $dac_biet, $ma_loai);
-
         $items = hanghoa_selectAll();
         $view_name="list.php";
+        }else{
+            $lisDanhMuc = danhMuc_selectAll();
+            $thisHangHoa = hanghoa_select_by_id($_POST['ma_hh']);
+            $view_name="edit.php";
+        }
+        
     }
     else if(exsist_param("btn-delete")){
         $id_hh=$_GET['ma_hh'];

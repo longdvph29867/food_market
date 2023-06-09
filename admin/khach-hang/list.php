@@ -34,9 +34,9 @@
     </tbody>
   </table>
   <div>
-    <button class="btn btn-success" name="btn-submit">Chọn tất cả</button>
-    <button class="btn btn-success">Bỏ chọn tất cả</button>
-    <button class="btn btn-danger">Xóa tất cả</button>
+    <button class="btn btn-success" id="check-all" type="button">Chọn tất cả</button>
+    <button class="btn btn-success" id="clear-all" type="button">Bỏ chọn tất cả</button>
+    <button class="btn btn-danger"id="btn-delete">Xóa tất cả</button>
     <a class="btn btn-primary" href="index.php?add">Thêm mới</a>
   </div>
 </div>

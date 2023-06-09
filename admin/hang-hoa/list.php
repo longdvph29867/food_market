@@ -27,7 +27,7 @@
           <td><?php echo $item['so_luot_xem'] ?></td>
           <th>
             <a class="btn btn-warning" href="index.php?btn_edit&ma_hh=<?php echo $item['ma_hh'] ?>">Sửa</a>
-            <a onclick="return confirm('ban co muon xoas khong?')" class="btn btn-danger" href="index.php?btn-delete&ma_hh=<?php echo $item['ma_hh'] ?>">Xóa</a>
+            <a class="btn btn-danger" href="index.php?btn-delete&ma_hh=<?php echo $item['ma_hh'] ?>">Xóa</a>
           </th>
         </tr>
       <?php

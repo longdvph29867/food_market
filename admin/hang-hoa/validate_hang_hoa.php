@@ -66,7 +66,9 @@ else {
 // hinh
 $typeImg = ['png', 'jpg', 'jpeg', 'webp'];
 $typeFile = pathinfo($_FILES["file"]['name'], PATHINFO_EXTENSION);
-if(strlen($_FILES["file"]['name']) == 0 ) {
+if(strlen($_FILES["file"]['name']) == 0 && isset($_POST['old_hinh'])){
+    $hinh=$_POST['old_hinh'];
+}else if(strlen($_FILES["file"]['name']) == 0 ) {
     $errors['file'] = 'Vui lòng chọn file!';
 }
 else {
@@ -76,6 +78,8 @@ else {
     else {
         if($_FILES["file"]['size'] > (2*1024*1024) ) {
             $errors['file'] = 'Kích thước không quá 2MB!';
+        }else{
+        $hinh=save_file('file', "$image_dir/image_products/");
         }
     }
 }

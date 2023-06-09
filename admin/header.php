@@ -1,7 +1,7 @@
 <div class="container">
   <div class="alert alert-success d-flex justify-content-between align-items-center mb-0">
     <h1>ADMIN</h1>
-    <a class="btn btn-primary" href="<?=$url_site?>/trang-chinh">Trở về trang web</a>
+    <a class="btn btn-primary" href="">Trở về trang web</a>
   </div>
 
 <div>
