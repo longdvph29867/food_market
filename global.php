@@ -43,18 +43,18 @@
         return $_COOKIE[$name] ?? '';
     }
 
-    function check_login () {
+    function check_login() {
         global $url_site;
         if(isset($_SESSION['user'])) {
             if($_SESSION['user']['vai_tro'] == 1) {
                 return;
             }
-            if(strpos($_SERVER['REQUEST_URL'], '/admin/') == false) {
+            if(strpos($_SERVER['REQUEST_URI'], '/admin/') == false) {
                 return;
             }
         }
-        $_SESSION['request_url'] = $_SERVER['REQUEST_URL'];
-        header("location: $url_site/tai-khoan/dang-nhap");
+        // $_SESSION['request_url'] = $_SERVER['REQUEST_URI'];
+        header("location: $url_site/tai-khoan/index.php?btn_form_login");
     }
 
     if(get_cookie('info-user')) {

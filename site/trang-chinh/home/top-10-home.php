@@ -21,7 +21,9 @@
                                 <hr>
                                 <p><span><?=number_format($item['don_gia'])?> đ</span>/1kg</p>
                             </div>
-                            <div class="top_order_number">
+                            <div class="top_order_number 
+
+                            ">
                                 <span>Top</span>
                                 <p><?=$stt?></p>
                             </div>

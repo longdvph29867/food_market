@@ -32,42 +32,59 @@
         
     }
     else if (exsist_param("btn_get_password")) {
-        $user = khachHang_select_by_id($ma_kh);
-        if($user) {
-            if($user['email'] == $email) {
-                $MESSAGE_SUCCESS = "Mật khẩu của bạn là: $user[mat_khau]";
-                $view_name="login.php";
+        $errors = validateGetPassword($ma_kh, $email);
+
+        if(empty($errors)) {
+
+            $user = khachHang_select_by_id($ma_kh);
+            if($user) {
+                if($user['email'] == $email) {
+                    $MESSAGE_SUCCESS = "Mật khẩu của bạn là: $user[mat_khau]";
+                    $view_name="login.php";
+                }
+                else {
+                    $MESSAGE_ERROR = "Sai địa chỉ email!";
+                    $view_name="quen-mat-khau.php";
+                }
             }
             else {
-                $MESSAGE_ERROR = "Sai địa chỉ email!";
+                $MESSAGE_ERROR = "Sai tên đăng nhập!";
                 $view_name="quen-mat-khau.php";
             }
         }
         else {
-            $MESSAGE_ERROR = "Sai tên đăng nhập!";
             $view_name="quen-mat-khau.php";
         }
+
     }
     else if (exsist_param("btn_login")) {
-        $user = khachHang_select_by_id($ma_kh);
-        if($user) {
-            if($user['mat_khau'] == $mat_khau) {
-                // 
-                if(exsist_param("ghi_nho")) {
-                    add_cookie('info-user', serialize($user), 30);
+        $errors = validateLogin($ma_kh, $mat_khau);
+        if(empty($errors)) {
+            $user = khachHang_select_by_id($ma_kh);
+            if($user) {
+                if($user['mat_khau'] == $mat_khau) {
+                    // 
+                    if(exsist_param("ghi_nho")) {
+                        add_cookie('info-user', serialize($user), 30);
+                    }
+                    $_SESSION['user'] = $user;
+                    header("location: $url_site/trang-chinh");
                 }
-                $_SESSION['user'] = $user;
-                header("location: $url_site/trang-chinh");
+                else {
+                    $MESSAGE_ERROR = 'Sai mật khẩu!';
+                    $view_name="login.php";
+                }
             }
             else {
-                $MESSAGE_ERROR = 'Sai mật khẩu!';
+                $MESSAGE_ERROR = 'Sai tài khoản!';
                 $view_name="login.php";
             }
         }
         else {
-            $MESSAGE_ERROR = 'Sai tài khoản!';
             $view_name="login.php";
         }
+
+
     }
     else if (exsist_param("btn_form_login")) {
         $view_name="login.php";

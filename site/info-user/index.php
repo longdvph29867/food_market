@@ -4,6 +4,7 @@
     require '../../dao/danhmuc.php';
     require '../../dao/khachHang.php';
     require '../../dao/hanghoa.php';
+    require "../validate-form.php";
 
 
     
@@ -12,30 +13,34 @@
         $list = 'change_info_form.php';
     }
     else if(exsist_param("btn_update_info")) {
-        $up_hinh = save_file('file', "$image_dir/image_products/");
-        $hinh =  strlen($up_hinh) > 0 ? $up_hinh : $_POST['old_hinh'];
+        $errors = validateChangeInfo($ho_ten, $email) + ($_FILES['hinh']['name'] ? validateFileImg('hinh') : []);
 
-        $ma_kh = $_POST['ma_kh'];
-        $ho_ten = $_POST['ho_ten'];
-        $email = $_POST['email'];
-
-        user_update($ma_kh, $ho_ten, $hinh, $email);
-        $MESSAGE_SUCCESS = "Cập nhật thành công!";
-        $_SESSION['user'] = khachHang_select_by_id($ma_kh);
-        if(get_cookie('info-user')) {
-            add_cookie('info-user', serialize(khachHang_select_by_id($ma_kh)), 30);
+        if(empty($errors)) {
+            $up_hinh = save_file('hinh', "$image_dir/image_user/");
+            $hinh =  strlen($up_hinh) > 0 ? $up_hinh : $_POST['old_hinh'];
+            try {
+                user_update($ma_kh, $ho_ten, $hinh, $email);
+                $MESSAGE_SUCCESS = "Cập nhật thành công!";
+                $_SESSION['user'] = khachHang_select_by_id($ma_kh);
+                if(get_cookie('info-user')) {
+                    add_cookie('info-user', serialize(khachHang_select_by_id($ma_kh)), 30);
+                }
+            }
+            catch (Exception $exc) {
+                $MESSAGE_ERROR = "Cập nhật không thành công!";
+            }
+            $list = 'info-user.php';
         }
-        $list = 'info-user.php';
+        else {
+            $list = 'change_info_form.php';
+        }
     }
     else if(exsist_param("btn_change_pass")) {
         $list = 'change_pass_form.php';
     }
     else if(exsist_param("btn_update_pass")) {
-        if($mat_khau2 != $mat_khau3) {
-            $MESSAGE_ERROR = "Xác nhận mật khẩu mới không đúng!";
-            $list = 'change_pass_form.php';
-        }
-        else {
+        $errors = validateChangePassword($mat_khau, $mat_khau2, $mat_khau3);
+        if(empty($errors)) {
             $user = khachHang_select_by_id($ma_kh);
             if($user) {
                 if($user['mat_khau'] == $mat_khau) {
@@ -50,7 +55,7 @@
                     }
                 }
                 else {
-                    $MESSAGE_ERROR = "Sai mật khẩu!";
+                    $MESSAGE_ERROR = "Sai mật khẩu cũ!";
                     $list = 'change_pass_form.php';
                 }
             }
@@ -59,7 +64,9 @@
                 $list = 'change_pass_form.php';
             }
         }
-
+        else {
+            $list = 'change_pass_form.php';
+        }
     }
     else {
         $list = 'info-user.php';

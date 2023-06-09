@@ -135,19 +135,15 @@
             <div class="absolute bottom-0 left-0 w-full px-12 py-3  bg-green-100 border-[#62d2a2] border-t-transparent" style="border-width: 1px;">
                 <?php
                 if (isset($_SESSION['user'])) {
-                    ?>
-                    <form action="chi-tiet.php?ma_hh=<?=$hang_hoa['ma_hh']?>" method="post" class="w-full flex">
-                    <input type="text" name="noi_dung" id="username" placeholder="Nhập bình luận"
-                    class="w-full text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded"
-                    style="border-width: 1px;"
-                    >
-                    <button name="btn_binh_luan" class="btn1 ml-2">
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                </form>
+                ?>
+                    <form action="chi-tiet.php?ma_hh=<?= $hang_hoa['ma_hh'] ?>" method="post" class="w-full flex">
+                        <input type="text" name="noi_dung" id="username" placeholder="Nhập bình luận" class="w-full text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded" style="border-width: 1px;">
+                        <button name="btn_binh_luan" class="btn1 ml-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
                 <?php
-                }
-                else {
+                } else {
                 ?>
                     <h3 class="font-medium">Vui lòng đăng nhập để bình luận về sản phẩm này</h3>
                 <?php
@@ -165,17 +161,20 @@
         <ul class="grid gap-7 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
             <?php
             foreach ($hh_cung_loai as $item) {
+                $link = $url_site . "/hang-hoa/chi-tiet.php?ma_hh=" . $item['ma_hh'];
             ?>
-                <li class="flex items-center">
-                    <div class="w-20 border-gray-200 rounded overflow-hidden" style="border-width: 1px;">
-                        <img src="<?php echo "$url_content/images/image_products/$item[hinh]" ?>" alt="">
-                    </div>
-                    <div class="pl-5">
-                        <h4 class="text-lg"><?= $item['ten_hh'] ?></h4>
-                        <div class="w-14 h-[1px] bg-gray-300 my-2"></div>
-                        <p class="text-[#62d2a2] font-bold "><?= number_format($item['don_gia']) ?> đ/1kg</p>
-                    </div>
-                </li>
+                <a href="<?= $link ?>">
+                    <li class="flex items-center">
+                        <div class="w-20 border-gray-200 rounded overflow-hidden" style="border-width: 1px;">
+                            <img src="<?php echo "$url_content/images/image_products/$item[hinh]" ?>" alt="">
+                        </div>
+                        <div class="pl-5">
+                            <h4 class="text-lg"><?= $item['ten_hh'] ?></h4>
+                            <div class="w-14 h-[1px] bg-gray-300 my-2"></div>
+                            <p class="text-[#62d2a2] font-bold "><?= number_format($item['don_gia']) ?> đ/1kg</p>
+                        </div>
+                    </li>
+                </a>
             <?php
             }
             ?>

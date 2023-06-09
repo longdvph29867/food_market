@@ -15,12 +15,26 @@
         <input type="text" name="ma_kh" id="ma_kh" 
         value="<?php if(isset($ma_kh)) echo $ma_kh ?>"
         class="text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded" style="border-width: 1px;">
+        <small class="text-sm text-red-500">
+            <?php
+            if(!empty($errors['ma_kh'])) {
+                echo $errors['ma_kh'];
+            }
+            ?>
+        </small>
     </div>
     <div class="flex flex-col mb-2">
         <label for="mat_khau">Mật khẩu</label>
         <input type="password" name="mat_khau" id="mat_khau" 
         value="<?php if(isset($mat_khau)) echo $mat_khau ?>"
         class="text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded" style="border-width: 1px;">
+        <small class="text-sm text-red-500">
+            <?php
+            if(!empty($errors['mat_khau'])) {
+                echo $errors['mat_khau'];
+            }
+            ?>
+        </small>
     </div>
     <div class="flex flex-col mb-2">
         <label>
