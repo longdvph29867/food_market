@@ -2,6 +2,7 @@
     require "../../global.php";
     require "../../dao/pdo.php";
     require "../../dao/khachHang.php";
+    check_login();
 
     extract($_REQUEST);
     if(exsist_param("add")){

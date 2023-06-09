@@ -3,7 +3,7 @@
     require "../../dao/pdo.php";
     require "../../dao/binhLuan.php";
     require "../../dao/hanghoa.php";
-
+    check_login();
     extract($_REQUEST);
     if(isset($_REQUEST['detial'])){
         $id_hh=$_GET['mahh'];

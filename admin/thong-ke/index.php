@@ -2,6 +2,7 @@
     require "../../global.php";
     require "../../dao/pdo.php";
     require "../../dao/thong_ke.php";
+    check_login();
 
     extract($_REQUEST);
     if(isset($_REQUEST['chart'])){

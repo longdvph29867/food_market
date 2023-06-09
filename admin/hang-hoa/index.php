@@ -3,6 +3,7 @@
     require "../../dao/pdo.php";
     require "../../dao/danhmuc.php";
     require "../../dao/hanghoa.php";
+    check_login();
 
     extract($_REQUEST);
     if(exsist_param("add")){
