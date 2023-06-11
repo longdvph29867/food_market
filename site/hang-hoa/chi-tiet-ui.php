@@ -137,7 +137,7 @@
                 if (isset($_SESSION['user'])) {
                 ?>
                     <form action="chi-tiet.php?ma_hh=<?= $hang_hoa['ma_hh'] ?>" method="post" class="w-full flex">
-                        <input type="text" name="noi_dung" id="username" placeholder="Nhập bình luận" class="w-full text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded" style="border-width: 1px;">
+                        <input required type="text" name="noi_dung" id="username" placeholder="Nhập bình luận" class="w-full text-[#666] border-gray-300 bg-[#f7f7f7] text-base px-2 py-2 outline-none focus:border-[#62d2a2] mt-1 focus:bg-white rounded" style="border-width: 1px;">
                         <button name="btn_binh_luan" class="btn1 ml-2">
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>

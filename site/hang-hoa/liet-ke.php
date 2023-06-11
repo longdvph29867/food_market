@@ -9,7 +9,6 @@
         $items = hang_hoa_select_loai($ma_loai);
     }
     else if(exsist_param("keywords")) {
-        echo $keywords;
         $items = hang_hoa_select_keyword($keywords);
     }
     else {

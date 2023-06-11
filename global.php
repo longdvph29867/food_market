@@ -60,4 +60,18 @@
     if(get_cookie('info-user')) {
         $_SESSION['user'] = unserialize(get_cookie('info-user'));
     }
+
+// if (isset($_SESSION['user']['ma_kh'])) {
+//     $sessionStartTime = intval($_SESSION['user']['ma_kh']);
+//     $currentTime = time();
+//     $sessionDuration = $currentTime - $sessionStartTime;
+
+//     // Chuyển đổi thời gian thành định dạng bạn muốn (ví dụ: giờ:phút:giây)
+//     $formattedDuration = gmdate("H:i:s", $sessionDuration);
+
+//     echo "Thời gian phiên làm việc: " . $formattedDuration;
+// } else {
+//     echo "Không có phiên làm việc hiện tại.";
+// }
+
 ?>

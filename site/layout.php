@@ -98,8 +98,8 @@
                             </ul>
                         </li>
                         <li><a href="<?=$url_site?>/trang-chinh/index.php?san-pham">Sản phẩm</a></li>
-                        <li><a href="<?=$url_site?>/trang-chinh/index.php?tin-tuc">Tin tức</a></li>
-                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="<?=$url_site?>/trang-chinh/index.php?gioi-thieu">Giới thiệu</a></li>
+                        <li><a href="<?=$url_site?>/trang-chinh/index.php?lien-he">Liên hệ</a></li>
                     </ul>
                 </nav>
                 <div class="btn_menu_mobile lg:hidden">
@@ -124,8 +124,8 @@
                         </ul>
                     </li>
                     <li><a href="#">Sản phẩm</a></li>
-                    <li><a href="index.php?tin-tuc">Tin tức</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="index.php?gioi-thieu">Giới thiệu</a></li>
+                    <li><a href="index.php?lien-he">Liên hệ</a></li>
                     <li class="flex justify-center pb-2 items-center flex-wrap">
                         <!-- tai khoan mobile -->
                         <?php require "trang-chinh/dang-nhap/dang-nhap-mobile.php"?>
