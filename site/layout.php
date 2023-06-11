@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="<?=$url_content?>/style/title.css">
     <link rel="stylesheet" href="<?=$url_content?>/style/categorys.css">
     <link rel="stylesheet" href="<?=$url_content?>/style/topproducts.css">
+    <link rel="stylesheet" href="<?=$url_content?>/style/aboutus.css">
     <style>
         .error {
             font-size: 14px;
