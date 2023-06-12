@@ -66,7 +66,7 @@
 //     $currentTime = time();
 //     $sessionDuration = $currentTime - $sessionStartTime;
 
-//     // Chuyển đổi thời gian thành định dạng bạn muốn (ví dụ: giờ:phút:giây)
+//     //Chuyển đổi thời gian thành định dạng bạn muốn (ví dụ: giờ:phút:giây)
 //     $formattedDuration = gmdate("H:i:s", $sessionDuration);
 
 //     echo "Thời gian phiên làm việc: " . $formattedDuration;
