@@ -27,12 +27,12 @@ else {
 }
 
 // giam_gia
-if(empty($_POST['giam_gia'])) {
+if($_POST['giam_gia'] == '') {
     $errors['giam_gia'] = 'Vui lòng điền vào trường này!';
 }
 else {
-    if((int)$_POST['giam_gia'] <= 0) {
-        $errors['giam_gia'] = 'Giá phải lớn hơn 0!';
+    if((int)$_POST['giam_gia'] < 0) {
+        $errors['giam_gia'] = 'Giá phải >= 0!';
     }
     else {
         $giam_gia = $_POST['giam_gia'];

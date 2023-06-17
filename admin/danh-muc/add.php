@@ -1,6 +1,6 @@
 
 <div class="container">
-    <h3>Thêm sản phẩm</h3>
+<h3 class="alert alert-success">Thêm danh mục</h3>
     <div>
         <form action="index.php" method="post">
             <div class="form-group">

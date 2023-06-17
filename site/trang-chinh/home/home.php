@@ -4,7 +4,6 @@
     <section class="banner pt-[178px] md:pt-[130px] lg:pt-[142px]">
         <div class="banner_slide">
             <div><img src="<?=$url_content?>/image-layout/banner11.jpeg" alt=""></div>
-            <div><img src="<?=$url_content?>/image-layout/banner10.webp" alt=""></div>
             <div><img src="<?=$url_content?>/image-layout/banner12.jpeg" alt=""></div>
             <div><img src="<?=$url_content?>/image-layout/banner1.webp" alt=""></div>
             <div><img src="<?=$url_content?>/image-layout/banner2.webp" alt=""></div>

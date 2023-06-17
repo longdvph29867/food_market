@@ -10,7 +10,12 @@
     }
     else if(exsist_param("btn-insert")){
         require "./validate_danh_muc.php";
-        if(empty($errors)){
+        if(danhMuc_name($ten_loai)) {
+            $errors['ten_loai'] = 'Tên loại đã tồn tại!';
+            $items = danhMuc_selectAll();
+            $view_name="add.php";
+        }
+        else if (empty($errors)){
             danhMuc_add($ten_loai);
             $items = danhMuc_selectAll();
             $view_name="list.php";
@@ -20,8 +25,6 @@
             $view_name="add.php";
         }
         // $ten_loai = $_POST['ten-loai'];
-        
-
         
     }
     else if(exsist_param("btn-edit")){

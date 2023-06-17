@@ -36,4 +36,10 @@
             pdo_execute($sql,$ma_loai);
         }
     }
+
+    // lây tên danh mục theo mã danh mục
+    function danhMuc_name($ten_loai){
+        $sql="SELECT * FROM `loai` WHERE ten_loai LIKE ?";
+        return pdo_query($sql,"%$ten_loai%");
+    }
 ?>

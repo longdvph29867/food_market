@@ -17,9 +17,9 @@
                 <tr>
                     <td><?php echo $loai['ten_loai']?></td>
                     <td><?php echo $loai['so_luong']?></td>
-                    <td><?php echo $loai['gia_min']?></td>
-                    <td><?php echo $loai['gia_max']?></td>
-                    <td><?php echo $loai['gia_avg']?></td>
+                    <td><?php echo number_format($loai['gia_min'])?></td>
+                    <td><?php echo number_format($loai['gia_max'])?></td>
+                    <td><?php echo number_format($loai['gia_avg'])?></td>
                 </tr>
                 <?php
             }

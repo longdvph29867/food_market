@@ -1,5 +1,5 @@
 <div class="container">
-    <h3>Thêm sản phẩm</h3>
+<h3 class="alert alert-success">Sửa loại hàng</h3>
     <form action="index.php" method="post">
         <div class="form-group">
             <label for="">Mã Loại</label>

@@ -86,9 +86,8 @@
                     </small>
                 </div>
 
-
                 <div class="form-group col-6">
-                    <label for="" class="d-block">Loại hàng</label>
+                    <label for="" class="d-block">Hàng đặc biệt</label>
                     <div>
                         <label>
                             <input type="radio" name="dac_biet" value="1" <?php if(isset($dac_biet) && $dac_biet == 1) echo "checked" ?>> Đặc biệt
