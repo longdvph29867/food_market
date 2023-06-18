@@ -26,7 +26,15 @@
                                 <h3><?= $item['ten_hh'] ?></h3>
                             </a>
                             <hr>
-                            <p><span><?= number_format($item['don_gia']) ?> đ</span>/1kg</p>
+                            <p><span><?= number_format($item['don_gia'] - $item['giam_gia']) ?> đ</span>/1kg</p>
+                            <?php
+                                if($item['giam_gia'] > 0) {
+                            ?>
+                                    <div><span class="line-through text-gray-400"><?= number_format($item['don_gia']) ?> đ/1kg</span> -<?=ceil(discountPrecent ($item['don_gia'], $item['giam_gia']))?>%</div>
+                            <?php
+                                    
+                                }
+                            ?>
                         </div>
                         <div class="top_order_number 
 

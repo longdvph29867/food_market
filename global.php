@@ -61,6 +61,10 @@
         $_SESSION['user'] = unserialize(get_cookie('info-user'));
     }
 
+    function discountPrecent ($price, $discount) {
+        return $discount/($price/100);
+    }
+
 // if (isset($_SESSION['user']['ma_kh'])) {
 //     $sessionStartTime = intval($_SESSION['user']['ma_kh']);
 //     $currentTime = time();

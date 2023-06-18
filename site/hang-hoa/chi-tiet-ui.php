@@ -21,7 +21,15 @@
                     <?= $hang_hoa['ten_hh'] ?>
                 </h3>
                 <div class="w-28 h-[1px] bg-gray-300 my-3 duration-300"></div>
-                <p class="text-[#62d2a2] text-xl font-bold"><?php echo number_format($hang_hoa['don_gia']) ?> đ</p>
+                <p class="text-[#62d2a2] text-xl font-bold"><?php echo number_format($hang_hoa['don_gia'] - $hang_hoa['giam_gia']) ?> đ</p>
+                <?php
+                if ($hang_hoa['giam_gia'] > 0) {
+                ?>
+                    <div><span class="line-through text-gray-400"><?= number_format($hang_hoa['don_gia']) ?> đ/1kg</span> -<?= ceil(discountPrecent($hang_hoa['don_gia'], $hang_hoa['giam_gia'])) ?>%</div>
+                <?php
+
+                }
+                ?>
                 <p class="py-5 text-[#666]">
                     <?= $hang_hoa['mo_ta'] ?>
                 </p>
@@ -170,8 +178,16 @@
                         </div>
                         <div class="pl-5">
                             <h4 class="text-lg"><?= $item['ten_hh'] ?></h4>
-                            <div class="w-14 h-[1px] bg-gray-300 my-2"></div>
-                            <p class="text-[#62d2a2] font-bold "><?= number_format($item['don_gia']) ?> đ/1kg</p>
+                            <div class="w-14 h-[1px] bg-gray-300 my-1"></div>
+                            <p class="text-[#62d2a2] font-bold "><?= number_format($item['don_gia'] - $item['giam_gia']) ?> đ/1kg</p>
+                            <?php
+                                if($item['giam_gia'] > 0) {
+                            ?>
+                                <div class="text-sm"><span class="line-through text-gray-400"><?= number_format($item['don_gia']) ?> đ/1kg</span> -<?=ceil(discountPrecent ($item['don_gia'], $item['giam_gia']))?>%</div>
+                            <?php
+                                    
+                                }
+                            ?>
                         </div>
                     </li>
                 </a>
