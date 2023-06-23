@@ -1,20 +1,39 @@
 
 
 <?php
+// function validateFileImg($hinh) {
+//     $errors = [];
+//     $typeImg = ['png', 'jpg', 'jpeg', 'webp'];
+//     $typeFile = pathinfo($_FILES[$hinh]['name'], PATHINFO_EXTENSION);
+//     if (strlen($_FILES[$hinh]['name']) == 0) {
+//         $errors['hinh'] = 'Vui lòng chọn file!';
+//     } else {
+//         if (!in_array(strtolower($typeFile), $typeImg)) {
+//             $errors['hinh'] = 'File phải có định dạng là png, jpg, jpeg, webp!';
+//         } else {
+//             if ($_FILES[$hinh]['size'] > (2 * 1024 * 1024)) {
+//                 $errors['hinh'] = 'Kích thước không quá 2 MB!';
+//             }
+//         }
+//     }
+//     return $errors;
+// }
+
 function validateFileImg($hinh) {
     $errors = [];
     $typeImg = ['png', 'jpg', 'jpeg', 'webp'];
     $typeFile = pathinfo($_FILES[$hinh]['name'], PATHINFO_EXTENSION);
     if (strlen($_FILES[$hinh]['name']) == 0) {
         $errors['hinh'] = 'Vui lòng chọn file!';
-    } else {
-        if (!in_array(strtolower($typeFile), $typeImg)) {
-            $errors['hinh'] = 'File phải có định dạng là png, jpg, jpeg, webp!';
-        } else {
-            if ($_FILES[$hinh]['size'] > (2 * 1024 * 1024)) {
-                $errors['hinh'] = 'Kích thước không quá 2 MB!';
-            }
-        }
+    } 
+    else if(!in_array(strtolower($typeFile), $typeImg)){
+        $errors['hinh'] = 'File phải có định dạng là png, jpg, jpeg, webp!';
+    }
+    else if($_FILES[$hinh]['size'] > (2 * 1024 * 1024)) {
+        $errors['hinh'] = 'Kích thước không quá 2 MB!';
+    }
+    else if($_FILES[$hinh]['name'] > 46) {
+        $errors['hinh'] = 'Tên file quá dài!';
     }
     return $errors;
 }

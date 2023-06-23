@@ -353,7 +353,7 @@
                     hinh: {
                         fileExtension: 'png,jpeg,jpg,webp',
                         fileSize: 2,
-                        maxlength: 100,
+                        maxlength: 45,
                     },
                 },
                 messages: {
