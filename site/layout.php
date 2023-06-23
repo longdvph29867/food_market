@@ -138,7 +138,7 @@
     </header>
 
     <!-- trang home -->
-    <?php require $view_name;?>
+    <?php include $view_name;?>
 
 
     <!-- footer -->
