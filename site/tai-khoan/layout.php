@@ -152,7 +152,6 @@
                     form.submit();
                 }
             });
-
             $('#form-get-password').validate({
                 rules: {
                     ma_kh: {

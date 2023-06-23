@@ -1,10 +1,8 @@
 <?php
-
     if(exsist_param("btn_logout")) {
         session_unset();
         session_destroy();
-        // delete_cookie('ma_kh');
-        // delete_cookie('mat_khau');
+
         delete_cookie('info-user');
         header("location: $url_site/trang-chinh");
     }
